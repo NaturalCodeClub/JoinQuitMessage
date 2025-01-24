@@ -3,3 +3,4 @@ version: '${version}'
 main: com.naturalcodeclub.joinquitmessage.JoinQuitMessage
 api-version: '1.20.1'
 authors: goofygazer
+

@@ -1,0 +1,11 @@
+join_message:
+  "<green>欢迎 <light_purple><bold>{player}</bold></light_purple> 加入游戏！</green>"
+  "<yellow>{player} 加入了，我们一起玩吧！"
+  "<aqua>欢迎 {player}，祝你游戏愉快！"
+quit_message:
+  "<red>再见 <light_purple><bold>{player}</bold></light_purple>！</red>"
+  "<red>{player} 离开了，希望下次再见！"
+  "<dark_red>{player} 退出了，期待你的归来！"
+  "<gray>{player} 默默离开了......"
+
+
