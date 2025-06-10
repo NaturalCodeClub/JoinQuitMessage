@@ -21,7 +21,7 @@ public final class JoinQuitMessage extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(new PlayerJoin(),this);
+        Bukkit.getPluginManager().registerEvents(new PlayerJoin(),this);    //注册事件
 
 
         getLogger().info("JoinQuitMessage插件已成功启用！");
