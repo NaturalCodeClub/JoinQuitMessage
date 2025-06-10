@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JoinQuitMessage:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JoinQuitMessage_jar</output-path>
+    <root id="archive" name="goofygazer.jar">
+      <element id="module-output" name="goofygazer" />
+    </root>
+  </artifact>
+</component>

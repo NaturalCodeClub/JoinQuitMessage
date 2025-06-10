@@ -1,0 +1,12 @@
+# IDEA
+.idea/
+*.iml
+
+# Java / Maven
+target/
+*.class
+*.log
+
+# OS 文件
+.DS_Store
+Thumbs.db
