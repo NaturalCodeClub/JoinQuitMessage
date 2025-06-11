@@ -1,0 +1,5 @@
+name: JoinQuitMessage
+version: '${project.version}'
+main: com.naturalcodeclub.goofygazer.JoinQuitMessage
+api-version: '1.21'
+folia-supported: true
