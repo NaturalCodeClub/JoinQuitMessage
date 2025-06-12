@@ -1,6 +1,6 @@
 # **JoinQuitMessage**
 
-一个轻量级的 Spigot 插件，使用 [Adventure MiniMessage](https://docs.advntr.dev/minimessage/) 实现玩家加入与退出服务器时的自定义消息。
+一个轻量级的 PaperSpigot 插件，使用 [Adventure MiniMessage](https://docs.advntr.dev/minimessage/) 实现玩家加入与退出服务器时的自定义消息。
 
 ✨功能特色
 
