@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class JoinQuitMessage extends JavaPlugin implements Listener {
-    public static JoinQuitMessage instance;
+    public static JavaPlugin instance;
 
     @Override
     public void onLoad() {
@@ -14,6 +14,7 @@ public final class JoinQuitMessage extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        instance = this;
         Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);    //注册事件
         Bukkit.getPluginManager().registerEvents(new PlayerQuit(), this);
         ConfigManager.initConfig();
