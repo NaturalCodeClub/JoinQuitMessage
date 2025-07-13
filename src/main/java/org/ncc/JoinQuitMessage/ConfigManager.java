@@ -1,6 +1,7 @@
 package org.ncc.JoinQuitMessage;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +40,7 @@ public class ConfigManager {
     }
 
     public static void loadConfig() {
-        config = JoinQuitMessage.instance.getConfig();
+        config = YamlConfiguration.loadConfiguration(configFile);
         joinMessage = config.getStringList("join-message").isEmpty() ? defaultJoinMessage : config.getStringList("join-message");
         quitMessage = config.getStringList("quit-message").isEmpty() ? defaultQuitMessage : config.getStringList("quit-message");
     }
