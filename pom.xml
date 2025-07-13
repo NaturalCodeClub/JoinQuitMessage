@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.NaturalCodeClub</groupId>
-  <artifactId>goofygazer</artifactId>
+  <groupId>org.ncc</groupId>
+  <artifactId>JoinQuitMessage</artifactId>
   <version>2.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -23,8 +23,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>21</source>
+          <target>21</target>
+            <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
       <plugin>
@@ -58,6 +59,10 @@
           <id>sonatype</id>
           <url>https://oss.sonatype.org/content/groups/public/</url>
       </repository>
+      <repository>
+          <id>placeholderapi</id>
+          <url>https://repo.extendedclip.com/releases/</url>
+      </repository>
   </repositories>
 
   <dependencies>
@@ -67,18 +72,24 @@
           <version>1.21-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
       </dependency>
-      <!-- Adventure MiniMessage -->
       <dependency>
-          <groupId>net.kyori</groupId>
-          <artifactId>adventure-text-minimessage</artifactId>
-          <version>4.14.0</version>
+          <groupId>me.clip</groupId>
+          <artifactId>placeholderapi</artifactId>
+          <version>2.11.6</version>
+          <scope>provided</scope>
       </dependency>
-      <!-- Adventure API -->
-      <dependency>
-          <groupId>net.kyori</groupId>
-          <artifactId>adventure-api</artifactId>
-          <version>4.14.0</version>
-      </dependency>
+<!--      &lt;!&ndash; Adventure MiniMessage &ndash;&gt;-->
+<!--      <dependency>-->
+<!--          <groupId>net.kyori</groupId>-->
+<!--          <artifactId>adventure-text-minimessage</artifactId>-->
+<!--          <version>4.14.0</version>-->
+<!--      </dependency>-->
+<!--      &lt;!&ndash; Adventure API &ndash;&gt;-->
+<!--      <dependency>-->
+<!--          <groupId>net.kyori</groupId>-->
+<!--          <artifactId>adventure-api</artifactId>-->
+<!--          <version>4.14.0</version>-->
+<!--      </dependency>-->
 
   </dependencies>
 </project>

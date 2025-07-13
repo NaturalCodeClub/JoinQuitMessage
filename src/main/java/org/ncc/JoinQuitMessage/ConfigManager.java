@@ -1,0 +1,52 @@
+package org.ncc.JoinQuitMessage;
+
+import org.bukkit.configuration.file.FileConfiguration;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.logging.Level;
+
+public class ConfigManager {
+    private static final File configFile = new File(JoinQuitMessage.instance.getDataFolder(), "config.yml");
+    private static FileConfiguration config = JoinQuitMessage.instance.getConfig();
+    private static List<String> defaultJoinMessage = List.of("<yellow>{player} 加入了游戏");
+    private static List<String> defaultQuitMessage = List.of("<yellow>{player} 退出了游戏");
+
+    public static List<String> joinMessage;
+    public static List<String> quitMessage;
+
+    public static void initConfig() {
+        if (!configFile.exists()) {
+            configFile.getParentFile().mkdirs();
+            try {
+                configFile.createNewFile();
+            } catch (IOException e) {
+                JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
+            }
+        }
+        if (config.get("join-message") == null) {
+            config.set("join-message", defaultJoinMessage);
+        }
+        if (config.get("quit-message") == null) {
+            config.set("quit-message", defaultQuitMessage);
+        }
+        try {
+            config.save(configFile);
+        } catch (IOException e) {
+            JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
+        }
+    }
+
+    public static void loadConfig() {
+        config = JoinQuitMessage.instance.getConfig();
+        joinMessage = config.getStringList("join-message").isEmpty() ? config.getStringList("join-message") : defaultJoinMessage;
+        quitMessage = config.getStringList("quit-message").isEmpty() ? config.getStringList("quit-message") : defaultQuitMessage;
+    }
+
+    public static void reloadConfig() {
+        initConfig();
+        JoinQuitMessage.instance.reloadConfig();
+        loadConfig();
+    }
+}
