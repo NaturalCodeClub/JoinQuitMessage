@@ -40,8 +40,8 @@ public class ConfigManager {
 
     public static void loadConfig() {
         config = JoinQuitMessage.instance.getConfig();
-        joinMessage = config.getStringList("join-message").isEmpty() ? config.getStringList("join-message") : defaultJoinMessage;
-        quitMessage = config.getStringList("quit-message").isEmpty() ? config.getStringList("quit-message") : defaultQuitMessage;
+        joinMessage = config.getStringList("join-message").isEmpty() ? defaultJoinMessage : config.getStringList("join-message");
+        quitMessage = config.getStringList("quit-message").isEmpty() ? defaultQuitMessage : config.getStringList("quit-message");
     }
 
     public static void reloadConfig() {

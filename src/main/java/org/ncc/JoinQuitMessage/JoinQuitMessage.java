@@ -16,10 +16,10 @@ public final class JoinQuitMessage extends JavaPlugin implements Listener {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);    //注册事件
         Bukkit.getPluginManager().registerEvents(new PlayerQuit(), this);
+        ConfigManager.initConfig();
+        ConfigManager.loadConfig();
         if(!Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
-            getLogger().warning("PlaceHolderAPI is needed!");
-            Bukkit.getPluginManager().disablePlugin(this);
-            return;
+            getLogger().warning("PlaceHolderAPI is needed for further features.");
         }
         getLogger().info("JoinQuitMessage插件已成功启用！");
         // Plugin startup logic
