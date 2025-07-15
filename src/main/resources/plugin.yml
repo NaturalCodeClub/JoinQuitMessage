@@ -5,3 +5,11 @@ api-version: '1.21'
 folia-supported: true
 softdepend:
   - PlaceHolderAPI
+
+commands:
+  joinquitmessage:
+    description: "使插件重载配置文件"
+    usage: /joinquitmessage #指令的用法 当onCommand()方法返回false时提示这里的内容
+    aliases: [ jqm ] #指令的多种形式 意为可以用 jqm 来触发/joinquitmessage这个指令
+    permission: "joinquitmessage.admin" #指令所需要的权限（权限节点默认op）
+    permission-message: "你配用吗你就用" #当输入者无上方权限时提示该信息
