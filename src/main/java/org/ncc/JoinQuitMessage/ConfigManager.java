@@ -47,7 +47,6 @@ public class ConfigManager {
 
     public static void reloadConfig() {
         initConfig();
-        JoinQuitMessage.instance.reloadConfig();
         loadConfig();
     }
 }
