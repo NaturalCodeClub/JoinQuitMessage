@@ -18,25 +18,32 @@ public class ConfigManager {
     public static List<String> quitMessage;
 
     public static void initConfig() {
+        boolean b = false;
         if (!configFile.exists()) {
             configFile.getParentFile().mkdirs();
             try {
                 configFile.createNewFile();
+                b = true;
             } catch (IOException e) {
                 JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
             }
         }
         if (config.get("join-message") == null) {
             config.set("join-message", defaultJoinMessage);
+            b = true;
         }
         if (config.get("quit-message") == null) {
             config.set("quit-message", defaultQuitMessage);
+            b = true;
         }
-        try {
-            config.save(configFile);
-        } catch (IOException e) {
-            JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
+        if(b){
+            try {
+                config.save(configFile);
+            } catch (IOException e) {
+                JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
+            }
         }
+
     }
 
     public static void loadConfig() {
