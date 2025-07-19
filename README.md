@@ -17,7 +17,7 @@
 3. 启动或重载服务器。
 
 ⚠️问题反馈
-若出现配置加载失败，请提供 logs/joinquitmessage.log 文件
+若出现配置加载失败，请提供日志文件
 GitHub Issue：[点击提交](https://github.com/NaturalCodeClub/JoinQuitMessage/issues)
 
 ## 📄 开源协议
