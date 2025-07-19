@@ -42,5 +42,4 @@ public final class JoinQuitMessage extends JavaPlugin implements Listener {
         // Plugin shutdown logic
         getLogger().info("JoinQuitMessage插件已成功禁用！");
     }
-
 }

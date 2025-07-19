@@ -43,7 +43,6 @@ public class ConfigManager {
                 JoinQuitMessage.instance.getLogger().log(Level.SEVERE, e.getMessage());
             }
         }
-
     }
 
     public static void loadConfig() {
